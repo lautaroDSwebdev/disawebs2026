@@ -26,12 +26,12 @@ function App() {
     { label: "Contacto", href: "contacto", icon: <Mail size={16} /> },
   ];
 
-  function Icon({ name, size = 20, strokeWidth = 1.8 }) {
-    const IconComponent = iconMap[name] || Code2;
-    return (
-      <IconComponent size={size} strokeWidth={strokeWidth} aria-hidden="true" />
-    );
-  }
+  // function Icon({ name = "", size = 20, strokeWidth = 1.8 }) {
+  //   const IconComponent = iconMap[name] || Code2;
+  //   return (
+  //     <IconComponent size={size} strokeWidth={strokeWidth} aria-hidden="true" />
+  //   );
+  // }
 
   const [activeSection, setActiveSection] = useState("");
 
@@ -205,7 +205,7 @@ function App() {
                 <img src={project.img} alt={`Vista previa de ${project.img}`} />
                 <span className="project-view">
                   Ver página{" "}
-                  <Icon name={siteData.icons.externalLink} size={16} />
+                  {/* <Icon name={siteData.icons.externalLink} size={16} /> */}
                 </span>
               </a>
               <div className="project-body">
@@ -217,7 +217,7 @@ function App() {
                   className="project-link"
                 >
                   {project.href}
-                  <Icon name={siteData.icons.externalLink} size={16} />
+                  {/* <Icon name={siteData.icons.externalLink} size={16} /> */}
                 </a>
               </div>
             </article>
@@ -248,7 +248,7 @@ function App() {
             {siteData.about.highlights.map((highlight) => (
               <div className="highlight" key={highlight}>
                 <span>
-                  <Icon name={siteData.icons.check} size={14} />
+                  {/* <Icon name={siteData.icons.check} size={14} /> */}
                 </span>
                 <p>{highlight}</p>
               </div>
@@ -261,7 +261,7 @@ function App() {
             target="_blank"
             rel="noreferrer"
           >
-            <Icon name={siteData.icons.fileText} size={18} />
+            {/* <Icon name={siteData.icons.fileText} size={18} /> */}
             {siteData.about.cv.label}
           </a>
         </div>
